@@ -1,0 +1,330 @@
+/* 1. Variabel warna utama */
+:root {
+  --primary-dark: #3f4fba;
+  --primary: #515be8;
+  --primary-light: #8e98ff;
+  --white: #ffffff;
+  --text-dark: #092b82;
+  --text-light: #ffffff;
+  --accent-red: #e60023;
+  --card-radius: 12px;
+  --small-radius: 6px;
+}
+
+/* 2. Reset dan pengaturan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--primary-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* 3. Navigasi */
+.header {
+  width: 100%;
+  background: var(--primary-dark);
+  padding: 45px 15px 12px;
+}
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.nav-menu a {
+  color: var(--text-dark);
+  background: var(--white);
+  text-decoration: none;
+  padding: 6px 11px;
+  border-radius: var(--small-radius);
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+.nav-menu a:hover {
+  background: #dfe3ff;
+  transform: translateY(-2px);
+}
+.nav-icon {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* 4. Bagian hero / profil */
+.hero {
+  width: 100%;
+  background: var(--primary);
+  color: var(--text-light);
+}
+.hero-container {
+  max-width: 1100px;
+  min-height: 168px;
+  margin: auto;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.hero-text {
+  flex: 1;
+  z-index: 2;
+}
+.hero-text h1 {
+  font-size: clamp(27px, 5vw, 40px);
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.hero-line {
+  width: 100%;
+  height: 1px;
+  background: var(--white);
+  margin: 5px 0 9px;
+}
+.hero-text h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.hero-text p {
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 0.3px;
+}
+.hero-photo {
+  width: 145px;
+  height: 145px;
+  flex-shrink: 0;
+  background: var(--accent-red);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.music-icon {
+  position: absolute;
+  color: var(--white);
+  font-size: 27px;
+  font-weight: bold;
+}
+.music-one { right: 32%; bottom: 5px; }
+.music-two { right: 13px; top: 15px; }
+
+/* 5. Tata letak konten utama */
+.main-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 7px 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+/* 6. Kartu konten */
+.content-card {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+
+/* 7. Judul setiap bagian */
+.section-heading {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 9px;
+  border-bottom: 1px solid var(--primary-light);
+}
+.section-heading h2 {
+  color: var(--text-dark);
+  font-size: 17px;
+  font-weight: bold;
+}
+.heading-icon {
+  color: var(--primary-light);
+  font-size: 24px;
+  font-weight: bold;
+}
+.palette-icon { font-size: 23px; }
+
+/* 8. Tentang saya */
+.about-text { padding: 7px 9px 10px; }
+.about-text p {
+  font-size: 15px;
+  line-height: 1.32;
+  letter-spacing: 0.2px;
+}
+
+/* 9. Galeri karya */
+.works-card { padding-bottom: 5px; }
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 8px 9px 0;
+}
+.work-item {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+}
+.work-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.work-item:hover img { transform: scale(1.04); }
+
+/* 10. Aplikasi dan skill */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 15px 10px;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  text-align: center;
+}
+.skill-symbol {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+}
+.skill-item p { font-size: 12px; font-weight: bold; }
+
+/* 11. Kontak */
+.contact-content {
+  padding: 15px 12px;
+  text-align: center;
+}
+.contact-content p { font-size: 14px; line-height: 1.5; }
+.email-button {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 9px 20px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+.email-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+.email-address { color: var(--text-dark); }
+
+/* 12. Footer */
+.footer {
+  background: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* 13. Penyesuaian untuk HP */
+@media screen and (max-width: 480px) {
+  .header { padding: 45px 6px 12px; }
+  .navbar { gap: 5px; }
+  .nav-menu { gap: 6px; }
+  .nav-menu a { padding: 6px 10px; font-size: 14px; }
+  .nav-icon { font-size: 27px; }
+  .hero-container { min-height: 168px; padding: 7px 6px; }
+  .hero-text { min-width: 0; }
+  .hero-text h1 {
+    font-size: clamp(23px, 5.7vw, 29px);
+    line-height: 1.35;
+    letter-spacing: -1px;
+  }
+  .hero-text h2 { font-size: 17px; }
+  .hero-text p { font-size: 13px; line-height: 1.25; }
+  .hero-photo { width: 145px; height: 145px; }
+  .music-one { right: 34%; bottom: 5px; }
+  .main-content { padding: 7px 10px 15px; gap: 9px; }
+  .works-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .work-item img { max-height: 190px; }
+  .skills-container { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* 14. Penyesuaian untuk layar sangat kecil */
+@media screen and (max-width: 350px) {
+  .nav-menu { gap: 4px; }
+  .nav-menu a { padding: 6px 7px; font-size: 12px; }
+  .hero-photo { width: 115px; height: 115px; }
+  .hero-text h1 { font-size: 22px; }
+  .hero-text h2 { font-size: 14px; }
+  .hero-text p { font-size: 11px; }
+  .works-grid { gap: 6px; }
+}
+
+/* 15. Penyesuaian untuk laptop */
+@media screen and (min-width: 768px) {
+  .header { padding-top: 25px; }
+  .hero-container { min-height: 280px; padding: 25px 35px; }
+  .hero-text h1 { font-size: 48px; }
+  .hero-text h2 { font-size: 23px; }
+  .hero-text p { font-size: 17px; }
+  .hero-photo { width: 220px; height: 220px; }
+  .main-content { padding: 20px 25px; gap: 15px; }
+  .section-heading { min-height: 45px; padding: 8px 15px; }
+  .section-heading h2 { font-size: 21px; }
+  .about-text { padding: 15px; }
+  .about-text p { font-size: 17px; }
+  .works-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    padding: 15px;
+  }
+  .work-item img { max-height: 300px; }
+  .skills-container { padding: 25px; }
+  .skill-symbol { width: 65px; height: 65px; font-size: 25px; }
+  .skill-item p { font-size: 14px; }
+}

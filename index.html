@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- Pengaturan halaman agar responsif -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio desain Qinthara Raissa Putri Payapo">
+  <title>Portofolio | Qinthara Raissa Putri Payapo</title>
+  <!-- File CSS utama -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigasi utama -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-menu">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#karya">Karya</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <div class="nav-icon" aria-hidden="true">▦</div>
+    </nav>
+  </header>
+
+  <!-- Bagian profil / beranda -->
+  <section class="hero" id="beranda">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Qinthara Raissa<br>Putri Payapo</h1>
+        <div class="hero-line"></div>
+        <h2>Desain Komunikasi Visual</h2>
+        <p>Menuangkan pikiran dengan seni<br>adalah aktivitas yang menyenangkan.</p>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/foto-profil.png" alt="Foto profil Qinthara Raissa Putri Payapo">
+      </div>
+      <!-- Dekorasi not musik -->
+      <span class="music-icon music-one" aria-hidden="true">♫</span>
+      <span class="music-icon music-two" aria-hidden="true">♪</span>
+    </div>
+  </section>
+
+  <!-- Seluruh isi portofolio -->
+  <main class="main-content">
+    <!-- Tentang saya -->
+    <section class="content-card about-card" id="tentang">
+      <div class="section-heading">
+        <h2>Tentang saya</h2>
+        <span class="heading-icon" aria-hidden="true">♧</span>
+      </div>
+      <div class="about-text">
+        <p>Seorang pelajar dengan minat seni terutama bidang desain, saya mengawali minat saya di seni saat Sekolah Dasar karena melihat banyak teman-teman yang suka menggambar.</p>
+      </div>
+    </section>
+
+    <!-- Galeri karya -->
+    <section class="content-card works-card" id="karya">
+      <div class="section-heading">
+        <h2>Karya</h2>
+        <span class="heading-icon palette-icon" aria-hidden="true">●</span>
+      </div>
+      <div class="works-grid">
+        <div class="work-item"><img src="assets/poster-kegiatan.jpg" alt="Desain poster kegiatan"></div>
+        <div class="work-item"><img src="assets/fara-course.jpg" alt="Desain promosi Fara Course"></div>
+        <div class="work-item"><img src="assets/buku-menu.jpg" alt="Desain buku menu"></div>
+        <div class="work-item"><img src="assets/idrila-logo.png" alt="Desain logo Idrila"></div>
+        <div class="work-item"><img src="assets/fara-logo.png" alt="Desain logo Fara Course"></div>
+        <div class="work-item"><img src="assets/hoshi-logo.png" alt="Desain logo Hoshi Company"></div>
+        <div class="work-item"><img src="assets/sertifikat.jpg" alt="Desain sertifikat"></div>
+        <div class="work-item"><img src="assets/dapur-hwanip.jpg" alt="Desain poster Dapur Hwanip"></div>
+        <div class="work-item"><img src="assets/ilustrasi.jpg" alt="Karya ilustrasi digital"></div>
+      </div>
+    </section>
+
+    <!-- Aplikasi dan keahlian -->
+    <section class="content-card skills-card" id="aplikasi">
+      <div class="section-heading">
+        <h2>Aplikasi</h2>
+        <span class="heading-icon" aria-hidden="true">✎</span>
+      </div>
+      <div class="skills-container">
+        <div class="skill-item"><span class="skill-symbol">Ps</span><p>Photoshop</p></div>
+        <div class="skill-item"><span class="skill-symbol">Ai</span><p>Illustrator</p></div>
+        <div class="skill-item"><span class="skill-symbol">C</span><p>CorelDRAW</p></div>
+        <div class="skill-item"><span class="skill-symbol">ib</span><p>IbisPaint</p></div>
+      </div>
+    </section>
+
+    <!-- Informasi kontak -->
+    <section class="content-card contact-card" id="kontak">
+      <div class="section-heading">
+        <h2>Kontak</h2>
+        <span class="heading-icon" aria-hidden="true">✉</span>
+      </div>
+      <div class="contact-content">
+        <p>Tertarik untuk mengenal atau bekerja sama? Silakan hubungi saya melalui email.</p>
+        <a href="mailto:qintharapayapo@gmail.com" class="email-button">✉ Hubungi Saya</a>
+        <p class="email-address">qintharapayapo@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer dengan tahun otomatis -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Qinthara Raissa Putri Payapo.</p>
+    <p>Designed with creativity ♡</p>
+  </footer>
+
+  <!-- File JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
